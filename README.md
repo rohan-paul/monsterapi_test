@@ -64,7 +64,7 @@ https://huggingface.co/qblocks?ref=blog.monsterapi.ai
 
 🧵 2/3
 
-The example code in image, deploys the Mixtral 8x7b Chat model with GPTQ 4bit quantization by using a 48GB GPU, using Monster Deploy.
+The example code in the image, deploys the Mixtral 8x7b Chat model with GPTQ 4bit quantization with a 48GB GPU through Monster Deploy.
 
 The Deployment will be able to serve the model as a REST API for both static and streaming token response support.
 
