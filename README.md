@@ -34,7 +34,7 @@ You can use your own custom datasets, and we get a good amount of control around
 
 📌 Specify Hyperparameter Configuration: such as epochs, learning rate, cutoff length, warmup steps, and so on.
 
-📌 Track stages of your finetuning jobs: Like, view job logs, monitor your job metrics using Weights & Biases. And finally upload model outputs to Huggingface.
+📌 Track stages of your finetuning jobs: Like, view job logs, monitor your job metrics using Weights & Biases. And finally upload model outputs to Hugging Face.
 
 ------
 
