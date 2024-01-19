@@ -20,7 +20,7 @@ The best part - it costs less than a cup of coffee and requires no coding! 🔥
 
 📌 And all the above steps are without writing a single line of code.
 
-📌 Recently they finetuned Mistral-7B using the "no-robots" dataset and the finetuned model outperformed the base model on various benchmarks. The entire model finetuning cost was less than a cup of coffee.
+📌 Recently, they finetuned Mistral-7B using the "no-robots" dataset and the finetuned model outperformed the base model on various benchmarks. The entire model finetuning cost was less than a cup of coffee.
 
 -----
 
