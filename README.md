@@ -30,7 +30,7 @@ The actual process for Finetuning an LLM
 
 📌 Dataset Preparation: You can choose from the curated selection of mostly used hugging face datasets with predefined training prompt configuration. OR
 
-You can use your own custom datasets, and we get a good amount of control around how the Dataset needs to be prepared in the right format. The portal provides a text-area in which target columns can be specified. Depending on the type of task chosen, you may have to alter the column names.
+You can use your own custom datasets, and we get a good amount of control around how the Dataset needs to be prepared in the right format. The portal provides a text-area in which target columns can be specified. Depending on the type of task chosen, you might need to alter the column names.
 
 📌 Specify Hyperparameter Configuration: such as epochs, learning rate, cutoff length, warmup steps, and so on.
 
