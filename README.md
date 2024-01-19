@@ -1,6 +1,8 @@
 Fine-tune a Large Language Model (LLM) and deploy it on MonsterAPI 🔥
 
-The best part - cost less than a cup of coffee and no coding required! 🔥
+The best part - it costs less than a cup of coffee and requires no coding! 🔥
+
+
 
 🧵 1/3
 
