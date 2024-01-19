@@ -12,7 +12,7 @@ The best part - it costs less than a cup of coffee and requires no coding! 🔥
 
 👉 Automatically configuring GPU computing environments,
 
-👉 Optimizes memory usage by finding the optimal batch size,
+👉 Optimizing memory usage by finding the optimal batch size,
 
 👉 Integrates experiment tracking with WandB, and
 
