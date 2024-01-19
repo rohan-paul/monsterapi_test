@@ -56,7 +56,7 @@ https://huggingface.co/qblocks?ref=blog.monsterapi.ai
 
 ##################################################
 
-## 2/n 2nd Tweet
+## 2nd Tweet
 
 ##################################################
 
@@ -72,7 +72,7 @@ The Deployment will be able to serve the model as a REST API for both static and
 
 #######################################################
 
-## 3/n 3rd Tweet
+## 3rd Tweet
 
 #######################################################
 
