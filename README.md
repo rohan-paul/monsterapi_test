@@ -19,15 +19,15 @@ The best part - No coding required and cost less than a cup of coffee! 🔥
 
 ----
 
-✨ Nowhere during this entire process, did i search for GPUs,
+✨ Nowhere during this entire process, did I search for GPUs.
 
-✨ I didn’t have to provision the GPU server, a VM and containerised them
+✨ I didn’t have to provision the GPU server, a VM and containerise them.
 
-✨ I didn’t have to setup Nvidia drivers, libraries and the CUDA environment
+✨ I didn’t have to setup NVIDIA drivers, libraries and the CUDA environment.
 
-✨ I just used the no-code option and got started within 30 seconds (we can change the time to may be 1 minute if that’s more real)
+✨ I just used the no-code option and got started within a minute.
 
-✨ Saved me not just a lot of time but immense frustration that generally comes up when dealing with traditional clouds for fine tuning and deployments
+✨ Saved me not just a lot of time but immense frustration that generally comes up when dealing with traditional clouds for fine tuning and deployments.
 
 ----
 
