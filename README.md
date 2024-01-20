@@ -29,7 +29,7 @@ The best part - No coding required and cost less than a cup of coffee! 🔥
 
 ✨ Saved me not just a lot of time but immense frustration that generally comes up when dealing with traditional clouds for fine tuning and deployments.
 
-https://monsterapi.ai
+👉 Website : http://monsterapi.ai
 
 ----
 
@@ -56,8 +56,6 @@ You can use your own custom datasets, and we get a good amount of control around
 📌 MonsterDeploy optimizes its backend operations using vLLM framework. vLLM is a rapid and user-friendly library for large language model inference and serving, notable for its state-of-the-art serving throughput.
 
 ------
-
-👉 Website : http://monsterapi.ai
 
 👉 Discord (Monsterapis) : https://discord.com/invite/mVXfag4kZN
 
