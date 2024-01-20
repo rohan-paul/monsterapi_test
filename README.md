@@ -1,7 +1,6 @@
 Fine-tune a Large Language Model (LLM) and deploy it on MonsterAPI 🔥
 
-The best part - it costs less than a cup of coffee and requires no coding! 🔥
-
+The best part - No coding required and cost less than a cup of coffee! 🔥
 
 
 🧵 1/3
@@ -18,7 +17,19 @@ The best part - it costs less than a cup of coffee and requires no coding! 🔥
 
 👉 Auto configures the pipeline to complete without any errors on their cost-optimised GPU cloud
 
-📌 And all the above steps are without writing a single line of code.
+----
+
+✨ Nowhere during this entire process, did i search for GPUs,
+
+✨ I didn’t have to provision the GPU server, a VM and containerised them
+
+✨ I didn’t have to setup Nvidia drivers, libraries and the CUDA environment
+
+✨ I just used the no-code option and got started within 30 seconds (we can change the time to may be 1 minute if that’s more real)
+
+✨ Saved me not just a lot of time but immense frustration that generally comes up when dealing with traditional clouds for fine tuning and deployments
+
+----
 
 📌 Recently, they finetuned Mistral-7B using the "no-robots" dataset and the finetuned model outperformed the base model on various benchmarks. The entire model finetuning cost was less than a cup of coffee.
 
@@ -48,9 +59,9 @@ You can use your own custom datasets, and we get a good amount of control around
 
 👉 Discord (Monsterapis) : https://discord.com/invite/mVXfag4kZN
 
-👉 Access all Finetuned Models by Monster here:
+👉 Chat with their Finetuned Model here (Mistral-7b-No-robots Finetunned LLM)
 
-https://huggingface.co/qblocks?ref=blog.monsterapi.ai
+https://huggingface.co/spaces/qblocks/chat-mistral-7b-norobots
 
 
 ![](assets/2024-01-18-22-27-14.png)
