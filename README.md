@@ -29,17 +29,19 @@ The best part - No coding required and cost less than a cup of coffee! 🔥
 
 ✨ Saved me not just a lot of time but immense frustration that generally comes up when dealing with traditional clouds for fine tuning and deployments.
 
-👉 Website : http://monsterapi.ai
+👉 Website : https://monsterapi.ai
 
 ----
 
-📌 Recently, they finetuned Mistral-7B using the "no-robots" dataset and the finetuned model outperformed the base model on various benchmarks. The entire model finetuning cost was less than a cup of coffee.
+📌 Checkout this colab for deploying CodeLlama 7B model with LoRA Adapter using MonsterAPI
+
+https://colab.research.google.com/drive/1VW4ReN61sa_zMl92p4g16E8IBwnIfb2e?usp=sharing#scrollTo=waAEIJBdDDtg
 
 -----
 
 The actual process for Finetuning an LLM
 
-📌 Launch a Finetuning Portal, and choose from the latest Large Language Models (LLMs) such as Llama 2 7B, CodeLlama, Falcon, GPT-J 6B or X-Gen.
+📌 Launch MonsterAPI’s finetuning portal, and choose from the latest Large Language Models (LLMs) such as Llama 2 7B, CodeLlama, Falcon, GPT-J 6B or X-Gen.
 
 📌 Dataset Preparation: You can choose from the curated selection of mostly used hugging face datasets with predefined training prompt configuration. OR
 
