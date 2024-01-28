@@ -71,7 +71,7 @@ https://huggingface.co/spaces/qblocks/chat-mistral-7b-norobots
 
 ##################################################
 
-## 2nd Tweet
+## 2nd
 
 ##################################################
 
@@ -82,12 +82,12 @@ The example code in the image, deploys the Mixtral 8x7b Chat model with GPTQ 4bi
 The Deployment will be able to serve the model as a REST API for both static and streaming token response support.
 
 
-![](assets/2nd-Tweet.png)
+![](assets/2nd-.png)
 
 
 #######################################################
 
-## 3rd Tweet
+## 3rd
 
 #######################################################
 
@@ -95,7 +95,7 @@ The Deployment will be able to serve the model as a REST API for both static and
 
 Once the deployment is live, let's query the deployed LLM endpoint.
 
-![](assets/3rd-Tweet.png)
+![](assets/3rd-.png)
 
 
 
