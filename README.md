@@ -1,98 +1,60 @@
-Fine-tune a Large Language Model (LLM) and deploy it on MonsterAPI 🔥
+## 📌  Intro
 
-The best part - No coding required and cost less than a cup of coffee! 🔥
+Are you struggling with figuring out right GPU resources for finetuning a language model?
 
+Finding it difficult to setup a compatible GPU computing environment for your finetuning process? or struggling with many python libraries to integrated.
 
-🧵 1/3
+Not to worry any more.
 
------
+MonsterAPI's no-code Large language model finetuner portal takes care of all the complexities for you and allows you to launch a fine-tuning job in a matter of minutes without writing a single line of code.
 
-@monsterapis designed their no-code LLM fine-tuner that simplifies the process of finetuning by:
+If you have a custom private dataset that you want to finetune ? No-problem. Monster's finetuning portal will accept any custom dataset for your custom finetuned LLM.
 
-👉 Automatically configuring GPU computing environments,
-
-👉 Optimizing memory usage by finding the optimal batch size,
-
-👉 Integrates experiment tracking with WandB, and
-
-👉 Auto configures the pipeline to complete without any errors on their cost-optimised GPU cloud
-
-----
-
-✨ Nowhere during this entire process, did I search for GPUs.
-
-✨ I didn’t have to provision the GPU server, a VM and containerise them.
-
-✨ I didn’t have to setup NVIDIA drivers, libraries and the CUDA environment.
-
-✨ I just used the no-code option and got started within a minute.
-
-✨ Saved me not just a lot of time but immense frustration that generally comes up when dealing with traditional clouds for fine tuning and deployments.
-
-👉 Website : https://monsterapi.ai
-
-----
-
-📌 Checkout this colab for deploying CodeLlama 7B model with LoRA Adapter using MonsterAPI
-
-https://colab.research.google.com/drive/1VW4ReN61sa_zMl92p4g16E8IBwnIfb2e?usp=sharing#scrollTo=waAEIJBdDDtg
-
------
-
-The actual process for Finetuning an LLM
-
-📌 Launch MonsterAPI’s finetuning portal, and choose from the latest Large Language Models (LLMs) such as Llama 2 7B, CodeLlama, Falcon, GPT-J 6B or X-Gen.
-
-📌 Dataset Preparation: You can choose from the curated selection of mostly used hugging face datasets with predefined training prompt configuration. OR
-
-You can use your own custom datasets, and we get a good amount of control around how the Dataset needs to be prepared in the right format. The portal provides a text-area in which target columns can be specified. Depending on the type of task chosen, you might need to alter the column names.
-
-📌 Specify Hyperparameter Configuration: such as epochs, learning rate, cutoff length, warmup steps, and so on.
-
-📌 Track stages of your finetuning jobs: Like, view job logs, monitor your job metrics using Weights & Biases. And finally upload model outputs to Hugging Face.
+And then after finetuning you can deploy your custom LLMs as API endpoints. The Rest API endpoint can then be integrated into any public web or mobile application.
 
 ------
 
-📌 Once you have finetuned an LLM on MonsterAPI, you will receive adapter weights as the final output. This adapter contains your fine-tuned model’s weights that Monster will host as an API endpoint using Monster Deploy.
+No-code fine-tuning is a breakthrough in the open-source world as it makes fine-tuning 10x more accessible to everyone.
 
-📌 MonsterDeploy optimizes its backend operations using vLLM framework. vLLM is a rapid and user-friendly library for large language model inference and serving, notable for its state-of-the-art serving throughput.
+===========
 
-------
+## 📌 MonsterAPI Supports 3 key Techniques
 
-👉 Discord (Monsterapis) : https://discord.com/invite/mVXfag4kZN
+The team behind MonsterAPI has recently announced new features that make the platform even better. These include:
 
-👉 Chat with their Finetuned Model here (Mistral-7b-No-robots Finetunned LLM)
+📌 QLora with 4-bit quantization and nf4: This feature reduces the size of the models by compressing them using quantization techniques. This allows users to fine-tune larger models using less memory and bandwidth.
 
-https://huggingface.co/spaces/qblocks/chat-mistral-7b-norobots
+📌 Flash Attention 2: This feature improves the speed and efficiency of training by using a novel attention mechanism that reduces the computational complexity of the models.
 
-
-![](assets/2024-01-18-22-27-14.png)
-
-
-##################################################
-
-## 2nd Tweet
-
-##################################################
-
-🧵 2/3
-
-The example code in the image, deploys the Mixtral 8x7b Chat model with GPTQ 4bit quantization with a 48GB GPU through Monster Deploy.
-
-The Deployment will be able to serve the model as a REST API for both static and streaming token response support.
+📌 Data and model parallelism on multiple GPUs: This feature enables users to train bigger models using larger context lengths by distributing the data and the model across multiple GPUs.
 
 
-![](assets/2nd-Tweet.png)
+=================
 
+## 📌 Background on why LoRA / QLoRA is great.
 
-#######################################################
+Before going further let's quickly see how QLoRA is a revolutionizing LLM finetuning.
 
-## 3rd Tweet
+📌 LoRA (Low-Rank Adaptation) is a genius approach for efficiently tuning large language models (LLMs). It modifies the self-attention and feed-forward layers of a transformer model by introducing low-rank matrices. This adaptation significantly reduces the number of trainable parameters during fine-tuning, enabling more efficient and scalable model updates without compromising performance.
 
-#######################################################
+📌 The core idea behind LoRA is original weight matrix  W  is adapted by adding a low-rank product of two smaller matrices  BA , where  B  and  A  are the low-rank matrices. So, the adapted weight matrix becomes  W + BA.
 
-🧵 3/3
+📌 So when finetuning with LoRA, the original weights  W  are frozen, and only the elements of the low-rank matrices  B  and  A  are trained, leading to a drastic reduction in the trainable parameter count.
 
-Once the deployment is live, let's query the deployed LLM endpoint:
+---------
 
-![](assets/3rd-Tweet.png)
+📌 QLoRA (Quantized LoRA) further elevates this concept by introducing quantization into the mix. The mechanism is about reducing the precision of the elements in weight-matrices.
+
+Instead of using high-precision floats (like 32-bit floating points), quantization represents these values with lower-precision formats (like 8-bit integers).
+
+📌 This reduced precision means each number takes up less memory. For instance, an 8-bit integer uses 4 times less memory than a 32-bit float. This directly translates to a smaller memory footprint for the model's trainable parameters.
+
+📌 During backpropagation and gradient updates, the computations are done using these lower-precision values, leading to hugely faster calculations since operations with lower-precision numbers are computationally less intensive.
+
+📌 The genius of this approach is in striking a balance between efficiency and model performance. While quantization introduces some approximation errors, the impact on model accuracy is typically minor, especially when fine-tuning on specific tasks where the adaptation scope is limited.
+
+And now Monster API supports QLora with upto as low as 4-bit quantization and again without writing any code.
+
+============
+
+Rest of the Video where I will show step by step the Finetuning Portal setup with Monster API
