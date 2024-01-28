@@ -1,3 +1,5 @@
+### Script
+
 ## 📌  Intro
 
 Are you struggling with figuring out right GPU resources for finetuning a language model?
