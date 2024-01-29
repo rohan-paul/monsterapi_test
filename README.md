@@ -2,7 +2,7 @@
 
 ## 📌  Intro
 
-Are you struggling with figuring out right GPU resources for finetuning a language model?
+Are you struggling with figuring out the right GPU resources for finetuning a language model?
 
 Finding it difficult to setup a compatible GPU computing environment for your finetuning process? or struggling with many python libraries to integrated.
 
@@ -12,7 +12,7 @@ MonsterAPI's no-code Large language model finetuner portal takes care of all the
 
 If you have a custom private dataset that you want to finetune ? No-problem. Monster's finetuning portal will accept any custom dataset for your custom finetuned LLM.
 
-And then after finetuning you can deploy your custom LLMs as API endpoints. The Rest API endpoint can then be integrated into any public web or mobile application.
+And then after finetuning you can deploy your custom LLMs as API endpoints using Monster Deploy. The Rest API endpoint can then be integrated into any public web or mobile application.
 
 ------
 
@@ -35,9 +35,7 @@ The team behind MonsterAPI has recently announced new features that make the pla
 
 ## 📌 Background on why LoRA / QLoRA is great.
 
-Before going further let's quickly see how QLoRA is a revolutionizing LLM finetuning.
-
-📌 LoRA (Low-Rank Adaptation) is a genius approach for efficiently tuning large language models (LLMs). It modifies the self-attention and feed-forward layers of a transformer model by introducing low-rank matrices. This adaptation significantly reduces the number of trainable parameters during fine-tuning, enabling more efficient and scalable model updates without compromising performance.
+📌 Over the past year LoRA (Low-Rank Adaptation) has pretty much revolutionized finetuning and almost every finetuning job in the industry is using some form LoRA and QLoRA. So let's just quickly see why they have become so Important.
 
 📌 The core idea behind LoRA is original weight matrix  W  is adapted by adding a low-rank product of two smaller matrices  BA , where  B  and  A  are the low-rank matrices. So, the adapted weight matrix becomes  W + BA.
 
