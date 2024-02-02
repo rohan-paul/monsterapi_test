@@ -37,7 +37,7 @@ The team behind MonsterAPI has recently announced new features that make the pla
 
 📌 Over the past year LoRA (Low-Rank Adaptation) has pretty much revolutionized finetuning and almost every finetuning job in the industry is using some form LoRA and QLoRA. So let's just quickly see why they have become so Important.
 
-📌 The core idea behind LoRA is original weight matrix  W  is adapted by adding a low-rank product of two smaller matrices  BA , where  B  and  A  are the low-rank matrices. So, the adapted weight matrix becomes  W + BA.
+📌 The core idea behind LoRA is original weight matrix  W  is adapted by adding a low-rank product of two smaller matrices
 
 📌 So when finetuning with LoRA, the original weights  W  are frozen, and only the elements of the low-rank matrices  B  and  A  are trained, leading to a drastic reduction in the trainable parameter count.
 
@@ -47,9 +47,7 @@ The team behind MonsterAPI has recently announced new features that make the pla
 
 Instead of using high-precision floats (like 32-bit floating points), quantization represents these values with lower-precision formats (like 8-bit integers).
 
-📌 This reduced precision means each number takes up less memory. For instance, an 8-bit integer uses 4 times less memory than a 32-bit float. This directly translates to a smaller memory footprint for the model's trainable parameters.
-
-📌 During backpropagation and gradient updates, the computations are done using these lower-precision values, leading to hugely faster calculations since operations with lower-precision numbers are computationally less intensive.
+📌 This reduced precision means each number takes up less memory. For instance, an 8-bit integer uses 4 times less memory than a 32-bit float, leading to hugely faster calculations and a huge savings in compute-resource.
 
 📌 The genius of this approach is in striking a balance between efficiency and model performance. While quantization introduces some approximation errors, the impact on model accuracy is typically minor, especially when fine-tuning on specific tasks where the adaptation scope is limited.
 
