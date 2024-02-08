@@ -1,16 +1,18 @@
-🤔 Thinking of deploying a Large Language Model (LLM) in production with low-cost and low-complexity ❓
+🤔 Thinking of deploying a popular Large Language Model (LLM) or a custom fine-tuned one, in production with low-cost and low-complexity ❓
 
-✨ Monster-API may just be the answer - gateway to seamlessly deploy LLMs and docker containers on its robust GPU compute infrastructure.
+✨ Monster-API is one "THE BEST" option - gateway to seamlessly deploy LLMs and docker containers on its robust GPU compute infrastructure. A wide range of use cases and demonstrates flexibility in situations such as Quick QA, quick commands, data summarization, and sophisticated queries.
 
 ✨ Quickly get an API endpoint that can start serving text generation requests using models like Llama2 7B, CodeLlama 34B, Falcon 40B or any of your custom/finetuned models.
 
 ✨ Developed with the vLLM (Variably-Large Language Models) project as its foundation, the Deploy service is optimized for high throughput.
 
-✨ As per their official blog, they were able to serve Zephyr-7b, a SOTA Open source 7B param LLM, at an incredibly economical rate of $1.25/hr, serving 39K requests per hour with an average request latency of 16ms on a 24GB GPU.
+✨ As per their official blog, they were able to serve Zephyr-7b, a SOTA Open source 7B param LLM, at an incredibly economical rate of $1.25/hr, serving 39K requests per hour with an average request latency of 16ms on a 24GB GPU. A total of 10 million tokens generated in an hour.
 
 And this was using Monster Deploy on GPUs such as Nvidia RTX A5000 (24GB)  and A100 (80GB).
 
-@monsterapis
+----
+
+I've worked a ton with @monsterapis and in their deployment platform you get the following.
 
 📌 Seamless experience with its intuitive UI
 
@@ -28,6 +30,22 @@ And this was using Monster Deploy on GPUs such as Nvidia RTX A5000 (24GB)  and A
 
 =================================
 
+A recent benchmark test of Monster Deploy of the Zephyr 7B model onto an 80GB Nvidia RTX A100, demonstrated its exceptional performance.
+
+👉 Number of users (peak concurrency): 200
+
+👉 Spawn Rate (users started/second): 1
+
+👉 Run Time: 15m
+
+👉 Input Token Length: 256 Tokens (max)
+
+👉 Output Token Length: 1500 Tokens (max)
+
+👉 Cost: $0.65 :arrow
+
+=================================
+
 
 🧵 1/3
 
@@ -42,7 +60,6 @@ The example code in image, deploys the Mixtral 8x7b Chat model with GPTQ 4bit qu
 
 The Deployment will be able to serve the model as a REST API for both static and streaming token response support.
 
-Signup Here - https://developer.monsterapi.ai/docs/monster-deploy-beta#beta-phase--feedback
 
 ```py
 !python3 -m pip install monsterapi==1.0.2b3
@@ -100,6 +117,23 @@ if status_debug:
   status_ret = deploy_client.get_deployment_status(deployment_id)
   print(status_ret)
 
+# 'status' will be initially set to "building" and then to "live"
+# as the deployment configuration progresses and
+#the logs will be available from building state onwards.
+
+logs_ret = deploy_client.get_deployment_logs(deployment_id, n_lines = 50)
+if 'logs' not in logs_ret:
+  raise Exception("Please wait until status changes to building!")
+for i in logs_ret['logs']:
+  print(i)
+
+```
+
+============================
+
+Once the deployment is live, let's query our deployed LLM endpoint:
+
+```py
 assert status_ret.get("status") == "live", "Please wait until status is live!"
 
 service_client  = mclient(api_key = status_ret.get("api_auth_token"),
@@ -108,9 +142,9 @@ service_client  = mclient(api_key = status_ret.get("api_auth_token"),
 payload = {
     "input_variables": {
         "prompt": "What's up?"},
-    "stream": False,
-    "temperature": 0.6,
-    "max_tokens": 2048
+        "stream": False,
+        "temperature": 0.6,
+        "max_tokens": 2048
 }
 
 output = service_client.generate(model = "deploy-llm", data = payload)
@@ -124,19 +158,22 @@ else:
 ```
 
 =================================
+
+Once your work is done, you may terminate your LLM deployment and stop the account billing
+
+```py
+terminate_return = deploy_client.terminate_deployment(deployment_id)
+print(terminate_return)
+
+```
+
 =================================
 
 
 🧵 1/3
 
-Below we showcase a benchmark of serving Zephyr-7b, a SOTA Open source 7B parameter LLM, using Monster Deploy on GPUs such as Nvidia RTX A5000 (24GB)  and A100 (80GB) in multiple scenarios.
+Below report showcase a benchmark of serving Zephyr-7b, a SOTA Open source 7B parameter LLM, using Monster Deploy on GPUs such as Nvidia RTX A5000 (24GB)  and A100 (80GB) in multiple scenarios.
 
-
-=================================
-
-🧵 1/3
-
-As a result, we were able to serve this LLM at an incredibly economical rate of $1.25/hr, serving 39K requests per hour with an average request latency of 16ms on a 24GB GPU
 
 ![](assets/2024-02-08-18-22-04.png)
 
@@ -147,6 +184,8 @@ Cost For Different Scenarios
 ![](assets/2024-02-08-18-22-17.png)
 
 ===================
+
+Signup Here - https://developer.monsterapi.ai/docs/monster-deploy-beta#beta-phase--feedback
 
 API Docs of Monster-Deploy - https://developer.monsterapi.ai/docs/monster-deploy-beta
 
