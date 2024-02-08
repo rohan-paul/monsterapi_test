@@ -1,4 +1,4 @@
-🤔 Thinking of deploying a popular Large Language Model (LLM) or a custom fine-tuned one, in production with low-cost and low-complexity ❓
+**🤔 Thinking of deploying a popular Large Language Model (LLM) or a custom fine-tuned one, in production with low-cost and low-complexity ❓**
 
 ✨ Monster-API is one "THE BEST" option - gateway to seamlessly deploy LLMs and docker containers on its robust GPU compute infrastructure. A wide range of use cases and demonstrates flexibility in situations such as Quick QA, quick commands, data summarization, and sophisticated queries.
 
@@ -200,7 +200,7 @@ Cost For Different Scenarios
 
 ===================
 
-Thats a wrap - all the important links below
+**Thats a wrap - all the important links are below**
 
 
 🧵 9/9
