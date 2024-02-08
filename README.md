@@ -1,8 +1,8 @@
 **🤔 Thinking of deploying a popular Large Language Model (LLM) or a custom fine-tuned one, in production with low-cost and low-complexity ❓**
 
-✨ Monster-API is one "THE BEST" option - gateway to seamlessly deploy LLMs and docker containers on its robust GPU compute infrastructure.
+✨ Monster-API is one "THE BEST" option - gateway to seamlessly deploy LLMs and docker containers on its robust GPU compute infrastructure (24GB NVIDIA RTX A5000 or 80GB A100 and going upto 160GB of VRAM).
 
-A wide range of use cases such as Quick QA, quick commands, data summarization, and sophisticated queries.
+✨ Use it for a wide range of use cases such as Quick QA, quick commands, data summarization, and sophisticated queries.
 
 ✨ Quickly get an API endpoint that can start serving text generation requests using models like Llama2 7B, CodeLlama 34B, Falcon 40B or any of your custom/finetuned models.
 
@@ -10,7 +10,7 @@ A wide range of use cases such as Quick QA, quick commands, data summarization, 
 
 ✨ As per their official blog, they were able to serve Zephyr-7b, a SOTA Open source 7B param LLM, at an incredibly economical rate of $1.25/hr, serving 39K requests per hour with an average request latency of 16ms on a 24GB GPU. A total of 10 million tokens generated in an hour.
 
-And this was using Monster Deploy on GPUs such as Nvidia RTX A5000 (24GB)  and A100 (80GB).
+And this was using Monster Deploy on GPUs such as NVIDIA RTX A5000 (24GB)  and A100 (80GB).
 
 ----
 
