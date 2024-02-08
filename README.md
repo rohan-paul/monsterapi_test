@@ -1,12 +1,28 @@
-🚀 Contemplating deploying a Large Language Model (LLM) in production with low-cost and low-complexity ❓
+🤔 Thinking of deploying a Large Language Model (LLM) in production with low-cost and low-complexity ❓
 
-Monster-API may just be the answer for you.
+✨ Monster-API may just be the answer - gateway to seamlessly deploy LLMs and docker containers on its robust GPU compute infrastructure.
 
-Deploys a Mixtral 8x7b Chat model with GPTQ 4bit quantization with a 48GB GPU through Monster Deploy.
+✨ Quickly get an API endpoint that can start serving text generation requests using models like Llama2 7B, CodeLlama 34B, Falcon 40B or any of your custom/finetuned models.
 
-The Deployment will serve the model as a REST API for both static and streaming token response support.
+✨ Developed with the vLLM (Variably-Large Language Models) project as its foundation, the Deploy service is optimized for high throughput.
+
+✨ As per their official blog, they were able to serve Zephyr-7b, a SOTA Open source 7B param LLM, at an incredibly economical rate of $1.25/hr, serving 39K requests per hour with an average request latency of 16ms on a 24GB GPU.
+
+And this was using Monster Deploy on GPUs such as Nvidia RTX A5000 (24GB)  and A100 (80GB).
 
 @monsterapis
+
+📌 Seamless experience with its intuitive UI
+
+📌 Python client or a single curl request.
+
+📌 Supports deployment of LLMs as a REST API endpoint and any custom docker image as a hosted docker container.
+
+📌 Choose from a range of GPU and RAM configurations upto 160GB of VRAM
+
+📌 Detailed API documentations with demo notebook.
+
+👉 Website : https://monsterapi.ai
 
 🧵 1/3
 
@@ -18,7 +34,7 @@ The Deployment will serve the model as a REST API for both static and streaming 
 To access Monster Deploy Beta:
 
 Step 1: Sign up on MonsterAPI platform.
-Step 2: Apply for Monster Deploy Beta here. Use your organization/business email for free 30K credits.
+Step 2: Apply for Monster Deploy Beta. Use your organization/business email for free 30K credits.
 
 =================================
 
@@ -26,6 +42,7 @@ The example code in image, deploys the Mixtral 8x7b Chat model with GPTQ 4bit qu
 
 The Deployment will be able to serve the model as a REST API for both static and streaming token response support.
 
+Signup Here - https://developer.monsterapi.ai/docs/monster-deploy-beta#beta-phase--feedback
 
 ```py
 !python3 -m pip install monsterapi==1.0.2b3
@@ -108,8 +125,6 @@ else:
 
 =================================
 =================================
-=================================
-=================================
 
 
 🧵 1/3
@@ -130,3 +145,13 @@ As a result, we were able to serve this LLM at an incredibly economical rate of 
 Cost For Different Scenarios
 
 ![](assets/2024-02-08-18-22-17.png)
+
+===================
+
+API Docs of Monster-Deploy - https://developer.monsterapi.ai/docs/monster-deploy-beta
+
+👉 Discord (Monsterapis) : https://discord.com/invite/mVXfag4kZN
+
+👉 Chat with their Finetuned Model here (Mistral-7b-No-robots Finetunned LLM)
+
+https://huggingface.co/spaces/qblocks/chat-mistral-7b-norobots
