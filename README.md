@@ -164,6 +164,14 @@ Once your work is done, you may terminate your LLM deployment and stop the accou
 ```py
 terminate_return = deploy_client.terminate_deployment(deployment_id)
 print(terminate_return)
+# {'message': 'Instance Terminated'}
+
+###############################
+# Print Status after Termination
+
+status_ret = deploy_client.get_deployment_status(deployment_id)
+print(status_ret)
+# {'status': 'terminatedByUser', 'message': 'Instance is terminatedByUser'}
 
 ```
 
@@ -184,6 +192,8 @@ Cost For Different Scenarios
 ![](assets/2024-02-08-18-22-17.png)
 
 ===================
+
+All the Important Links
 
 Signup Here - https://developer.monsterapi.ai/docs/monster-deploy-beta#beta-phase--feedback
 
