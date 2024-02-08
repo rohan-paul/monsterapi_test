@@ -1,6 +1,8 @@
 **🤔 Thinking of deploying a popular Large Language Model (LLM) or a custom fine-tuned one, in production with low-cost and low-complexity ❓**
 
-✨ Monster-API is one "THE BEST" option - gateway to seamlessly deploy LLMs and docker containers on its robust GPU compute infrastructure. A wide range of use cases and demonstrates flexibility in situations such as Quick QA, quick commands, data summarization, and sophisticated queries.
+✨ Monster-API is one "THE BEST" option - gateway to seamlessly deploy LLMs and docker containers on its robust GPU compute infrastructure.
+
+A wide range of use cases such as Quick QA, quick commands, data summarization, and sophisticated queries.
 
 ✨ Quickly get an API endpoint that can start serving text generation requests using models like Llama2 7B, CodeLlama 34B, Falcon 40B or any of your custom/finetuned models.
 
