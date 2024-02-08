@@ -44,15 +44,16 @@ A recent benchmark test of Monster Deploy of the Zephyr 7B model onto an 80GB Nv
 
 👉 Cost: $0.65 :arrow
 
-=================================
-
-
 🧵 1/3
 
-To access Monster Deploy Beta:
+=================================
+
+📌 To access Monster Deploy Beta:
 
 Step 1: Sign up on MonsterAPI platform.
 Step 2: Apply for Monster Deploy Beta. Use your organization/business email for free 30K credits.
+
+🧵 1/3
 
 =================================
 
@@ -60,6 +61,7 @@ The example code in image, deploys the Mixtral 8x7b Chat model with GPTQ 4bit qu
 
 The Deployment will be able to serve the model as a REST API for both static and streaming token response support.
 
+🧵 1/3
 
 ```py
 !python3 -m pip install monsterapi==1.0.2b3
@@ -108,6 +110,8 @@ print(deployment_id)
 
 Once the deployment is live, let's query our deployed LLM endpoint
 
+🧵 1/3
+
 ```py
 import json
 
@@ -132,6 +136,8 @@ for i in logs_ret['logs']:
 ============================
 
 Once the deployment is live, let's query our deployed LLM endpoint:
+
+🧵 1/3
 
 ```py
 assert status_ret.get("status") == "live", "Please wait until status is live!"
@@ -161,6 +167,8 @@ else:
 
 Once your work is done, you may terminate your LLM deployment and stop the account billing
 
+🧵 1/3
+
 ```py
 terminate_return = deploy_client.terminate_deployment(deployment_id)
 print(terminate_return)
@@ -177,10 +185,9 @@ print(status_ret)
 
 =================================
 
+Below report showcase a benchmark of serving Zephyr-7b, using Monster Deploy on GPUs such as Nvidia RTX A5000 (24GB)  and A100 (80GB) in multiple scenarios.
 
 🧵 1/3
-
-Below report showcase a benchmark of serving Zephyr-7b, a SOTA Open source 7B parameter LLM, using Monster Deploy on GPUs such as Nvidia RTX A5000 (24GB)  and A100 (80GB) in multiple scenarios.
 
 
 ![](assets/2024-02-08-18-22-04.png)
@@ -193,9 +200,14 @@ Cost For Different Scenarios
 
 ===================
 
-All the Important Links
+Thats a wrap - all the important links below
+
+
+🧵 1/3
 
 Signup Here - https://developer.monsterapi.ai/docs/monster-deploy-beta#beta-phase--feedback
+
+After signing up on the Google form you get 10K credits. And if you sign up with your organization ID you receive 30K credits.
 
 API Docs of Monster-Deploy - https://developer.monsterapi.ai/docs/monster-deploy-beta
 
