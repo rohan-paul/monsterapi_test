@@ -56,7 +56,7 @@ A recent benchmark test of Monster Deploy of the Zephyr 7B model onto an 80GB Nv
 
 📌 To access Monster Deploy Beta:
 
-👉 Sign up on MonsterAPI: https://monsterapi.ai/signup?
+👉 Sign up on MonsterAPI: https://monsterapi.ai/signup
 
 👉 Apply for Monster Deploy Beta: https://forms.gle/2vdzBca3B9qWqXXZ6
 
