@@ -1,14 +1,14 @@
 **🤔 Thinking of deploying a popular Large Language Model (LLM) or a custom fine-tuned one, in production with low-cost and low-complexity ❓**
 
-✨ Monster-API is one "THE BEST" option - gateway to seamlessly deploy LLMs and docker containers on its robust GPU compute infrastructure (24GB NVIDIA RTX A5000 or 80GB A100 and going upto 160GB of VRAM).
+✨ MonsterAPI is the best LLM deployment solution that I've recently come across. It enables me to host pre-trained and fine-tuned LLMs in one-click on its GPU cloud with a vast scalability and range of GPUs from 16GB to 80GB vRAM options.
 
-✨ Use it for a wide range of use cases such as Quick QA, quick commands, data summarization, and sophisticated queries.
+✨ I've used it for a wide range of use cases such as Quick QA, quick commands, data summarization, and sophisticated queries.
 
 ✨ Quickly get an API endpoint that can start serving text generation requests using models like Llama2 7B, CodeLlama 34B, Falcon 40B or any of your custom/finetuned models.
 
-✨ Developed with the vLLM (Variably-Large Language Models) project as its foundation, the Deploy service is optimized for high throughput.
+✨ Developed with the vLLM (Variably-Large Language Models) project as its foundation, Monster Deploy is optimized for high throughput.
 
-✨ As per their official blog, they were able to serve Zephyr-7b, a SOTA Open source 7B param LLM, at an incredibly economical rate of $1.25/hr, serving 39K requests per hour with an average request latency of 16ms on a 24GB GPU. A total of 10 million tokens generated in an hour.
+✨ As per their official blog, they recently delivered upto 10 Million tokens peak throughput for a mere cost of $1.25 while serving Zephyr 7B model, serving 39K requests per hour with an average request latency of 16ms on a 24GB GPU.
 
 And this was using Monster Deploy on GPUs such as NVIDIA RTX A5000 (24GB)  and A100 (80GB).
 
@@ -16,7 +16,7 @@ And this was using Monster Deploy on GPUs such as NVIDIA RTX A5000 (24GB)  and A
 
 I've worked a ton with @monsterapis and in their deployment platform you get the following.
 
-📌 Seamless experience with its intuitive UI
+📌 Seamless one-click deployments with its intuitive UI
 
 📌 Python client or a single curl request.
 
@@ -24,11 +24,15 @@ I've worked a ton with @monsterapis and in their deployment platform you get the
 
 📌 Choose from a range of GPU and RAM configurations upto 160GB of VRAM
 
-📌 Detailed API documentations with demo notebook.
+📌 Detailed API documentations with ready to use colab notebooks.
 
 👉 Website : https://monsterapi.ai
 
 🧵 1/9
+
+Below image shows the cost For Different Scenarios
+
+![](assets/2024-02-08-18-22-17.png)
 
 =================================
 
@@ -44,7 +48,7 @@ A recent benchmark test of Monster Deploy of the Zephyr 7B model onto an 80GB Nv
 
 👉 Output Token Length: 1500 Tokens (max)
 
-👉 Cost: $0.65 :arrow
+👉 Cost: $0.65
 
 🧵 2/9
 
@@ -52,14 +56,17 @@ A recent benchmark test of Monster Deploy of the Zephyr 7B model onto an 80GB Nv
 
 📌 To access Monster Deploy Beta:
 
-Step 1: Sign up on MonsterAPI platform.
-Step 2: Apply for Monster Deploy Beta. Use your organization/business email for free 30K credits.
+👉 Sign up on MonsterAPI: monsterapi.ai/signup
+
+👉 Apply for Monster Deploy Beta: https://forms.gle/2vdzBca3B9qWqXXZ6
+
+👉 Deploy LLMs with these examples: https://developer.monsterapi.ai/docs/projects#demo-notebooks-for-using-monster-deploy
 
 🧵 3/9
 
 =================================
 
-The example code in image, deploys the Mixtral 8x7b Chat model with GPTQ 4bit quantization by using a 48GB GPU, using Monster Deploy.
+The code snippet below shows how you can use Monsterapi Python SDK to quickly deploy Mixtral 8x7B Chat model on Monster Deploy.
 
 The Deployment will be able to serve the model as a REST API for both static and streaming token response support.
 
@@ -196,20 +203,14 @@ Below report showcase a benchmark of serving Zephyr-7b, using Monster Deploy on 
 
 =================================
 
-Cost For Different Scenarios
-
-![](assets/2024-02-08-18-22-17.png)
-
-===================
-
 **Thats a wrap - all the important links are below**
 
 
 🧵 9/9
 
-Signup Here - https://developer.monsterapi.ai/docs/monster-deploy-beta#beta-phase--feedback
+After you've signed up on MonsterAPI, apply for Deploy beta access here - https://developer.monsterapi.ai/docs/monster-deploy-beta#beta-phase--feedback
 
-After signing up on the Google form you get 10K credits. And if you sign up with your organization ID you receive 30K credits.
+And get Free trial credits.
 
 API Docs of Monster-Deploy - https://developer.monsterapi.ai/docs/monster-deploy-beta
 
