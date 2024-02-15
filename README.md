@@ -54,6 +54,8 @@ A recent benchmark test of Monster Deploy of the Zephyr 7B model onto an 80GB Nv
 
 =================================
 
+🧵 3/9
+
 📌 To access Monster Deploy Beta:
 
 👉 Sign up on MonsterAPI: https://monsterapi.ai/signup
@@ -62,15 +64,16 @@ A recent benchmark test of Monster Deploy of the Zephyr 7B model onto an 80GB Nv
 
 👉 Deploy LLMs with these examples: https://developer.monsterapi.ai/docs/projects#demo-notebooks-for-using-monster-deploy
 
-🧵 3/9
+
 
 =================================
+
+🧵 4/9
 
 The code snippet below shows how you can use Monsterapi Python SDK to quickly deploy Mixtral 8x7B Chat model on Monster Deploy.
 
 The Deployment will be able to serve the model as a REST API for both static and streaming token response support.
 
-🧵 4/9
 
 ```py
 !python3 -m pip install monsterapi==1.0.2b3
@@ -117,11 +120,11 @@ print(deployment_id)
 
 =================================
 
+🧵 5/9
+
 Track Deployment Progress
 
 Keep in mind that it takes a few minutes to spin up the instance. The 'status' will transition from 'building' to 'live' as the build progresses. You can access the logs from the 'building' state to track its progress:
-
-🧵 5/9
 
 ```py
 import json
@@ -146,9 +149,10 @@ for i in logs_ret['logs']:
 
 ============================
 
+🧵 6/9
+
 Once the deployment is live, let's query our deployed LLM endpoint:
 
-🧵 6/9
 
 ```py
 assert status_ret.get("status") == "live", "Please wait until status is live!"
@@ -176,11 +180,13 @@ else:
 
 =================================
 
-Once your work is done, you may terminate your LLM deployment and stop the account billing
-
 🧵 7/9
 
+Once your work is done, you may terminate your LLM deployment and stop the account billing
+
+
 ```py
+
 terminate_return = deploy_client.terminate_deployment(deployment_id)
 print(terminate_return)
 # {'message': 'Instance Terminated'}
@@ -196,19 +202,19 @@ print(status_ret)
 
 =================================
 
+🧵 8/9
+
 Below report showcases a benchmark of serving Zephyr-7b, using Monster Deploy on GPUs such as Nvidia RTX A5000 (24GB)  and A100 (80GB) in multiple scenarios.
 
-🧵 8/9
 
 
 ![](assets/2024-02-08-18-22-04.png)
 
 =================================
 
-Thats a wrap - all the important links are below
-
-
 🧵 9/9
+
+Thats a wrap - all the important links are below
 
 After you've signed up on MonsterAPI, apply for Deploy beta access here - https://developer.monsterapi.ai/docs/monster-deploy-beta#beta-phase--feedback
 
