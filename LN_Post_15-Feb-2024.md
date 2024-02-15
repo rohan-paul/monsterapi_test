@@ -1,4 +1,4 @@
-**🤔 Thinking of deploying a popular Large Language Model (LLM) or a custom fine-tuned one, in production with low-cost and low-complexity ❓**
+🤔 Thinking of deploying a popular Large Language Model (LLM) or a custom fine-tuned one, in production with low-cost and low-complexity ❓
 
 ✨ MonsterAPI is the best LLM deployment solution that I've recently come across. It enables me to host pre-trained and fine-tuned LLMs in one-click on its GPU cloud with a vast scalability and range of GPUs from 16GB to 80GB vRAM options.
 
@@ -28,13 +28,12 @@ I've worked a ton with @monsterapis and in their deployment platform you get the
 
 👉 Website : https://monsterapi.ai
 
-🧵 1/9
 
 Below image shows the cost For Different Scenarios
 
 ![](assets/2024-02-08-18-22-17.png)
 
-=================================
+----------
 
 A recent benchmark test of Monster Deploy of the Zephyr 7B model onto an 80GB Nvidia RTX A100, demonstrated its exceptional performance.
 
@@ -50,9 +49,8 @@ A recent benchmark test of Monster Deploy of the Zephyr 7B model onto an 80GB Nv
 
 👉 Cost: $0.65
 
-🧵 2/9
 
-=================================
+----------
 
 📌 To access Monster Deploy Beta:
 
@@ -62,15 +60,13 @@ A recent benchmark test of Monster Deploy of the Zephyr 7B model onto an 80GB Nv
 
 👉 Deploy LLMs with these examples: https://developer.monsterapi.ai/docs/projects#demo-notebooks-for-using-monster-deploy
 
-🧵 3/9
 
-=================================
+----------
 
 The code snippet below shows how you can use Monsterapi Python SDK to quickly deploy Mixtral 8x7B Chat model on Monster Deploy.
 
 The Deployment will be able to serve the model as a REST API for both static and streaming token response support.
 
-🧵 4/9
 
 ```py
 !python3 -m pip install monsterapi==1.0.2b3
@@ -115,15 +111,13 @@ print(deployment_id)
 
 ```
 
-=================================
+----------
 
-Track Deployment Progress
+Once the deployment is live, let's query our deployed LLM endpoint
 
-Keep in mind that it takes a few minutes to spin up the instance. The 'status' will transition from 'building' to 'live' as the build progresses. You can access the logs from the 'building' state to track its progress:
-
-🧵 5/9
 
 ```py
+
 import json
 
 status_debug = True # Just a placeholder to show possible statuses.
@@ -144,11 +138,10 @@ for i in logs_ret['logs']:
 
 ```
 
-============================
+--------------
 
 Once the deployment is live, let's query our deployed LLM endpoint:
 
-🧵 6/9
 
 ```py
 assert status_ret.get("status") == "live", "Please wait until status is live!"
@@ -174,11 +167,10 @@ else:
 
 ```
 
-=================================
+----------
 
 Once your work is done, you may terminate your LLM deployment and stop the account billing
 
-🧵 7/9
 
 ```py
 terminate_return = deploy_client.terminate_deployment(deployment_id)
@@ -194,21 +186,18 @@ print(status_ret)
 
 ```
 
-=================================
+----------
 
 Below report showcase a benchmark of serving Zephyr-7b, using Monster Deploy on GPUs such as Nvidia RTX A5000 (24GB)  and A100 (80GB) in multiple scenarios.
 
-🧵 8/9
 
 
 ![](assets/2024-02-08-18-22-04.png)
 
-=================================
+----------
 
-**Thats a wrap - all the important links are below**
+Thats a wrap - all the important links are below
 
-
-🧵 9/9
 
 After you've signed up on MonsterAPI, apply for Deploy beta access here - https://developer.monsterapi.ai/docs/monster-deploy-beta#beta-phase--feedback
 
