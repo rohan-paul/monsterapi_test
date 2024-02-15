@@ -113,7 +113,9 @@ print(deployment_id)
 
 ----------
 
-Once the deployment is live, let's query our deployed LLM endpoint
+Track Deployment Progress
+
+Keep in mind that it takes a few minutes to spin up the instance. The 'status' will transition from 'building' to 'live' as the build progresses. You can access the logs from the 'building' state to track its progress:
 
 
 ```py
@@ -188,7 +190,7 @@ print(status_ret)
 
 ----------
 
-Below report showcase a benchmark of serving Zephyr-7b, using Monster Deploy on GPUs such as Nvidia RTX A5000 (24GB)  and A100 (80GB) in multiple scenarios.
+Below report showcases a benchmark of serving Zephyr-7b, using Monster Deploy on GPUs such as Nvidia RTX A5000 (24GB)  and A100 (80GB) in multiple scenarios.
 
 
 

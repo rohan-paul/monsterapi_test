@@ -1,4 +1,4 @@
-**🤔 Thinking of deploying a popular Large Language Model (LLM) or a custom fine-tuned one, in production with low-cost and low-complexity ❓**
+🤔 Thinking of deploying a popular Large Language Model (LLM) or a custom fine-tuned one, in production with low-cost and low-complexity ❓
 
 ✨ MonsterAPI is the best LLM deployment solution that I've recently come across. It enables me to host pre-trained and fine-tuned LLMs in one-click on its GPU cloud with a vast scalability and range of GPUs from 16GB to 80GB vRAM options.
 
@@ -196,7 +196,7 @@ print(status_ret)
 
 =================================
 
-Below report showcase a benchmark of serving Zephyr-7b, using Monster Deploy on GPUs such as Nvidia RTX A5000 (24GB)  and A100 (80GB) in multiple scenarios.
+Below report showcases a benchmark of serving Zephyr-7b, using Monster Deploy on GPUs such as Nvidia RTX A5000 (24GB)  and A100 (80GB) in multiple scenarios.
 
 🧵 8/9
 
@@ -205,7 +205,7 @@ Below report showcase a benchmark of serving Zephyr-7b, using Monster Deploy on 
 
 =================================
 
-**Thats a wrap - all the important links are below**
+Thats a wrap - all the important links are below
 
 
 🧵 9/9
