@@ -1,4 +1,4 @@
-✨ Develop a Pipeline for a RAG Chat Bot with Monster API within few minutes and without a single line of code.
+✨ Effortlessly Launch Your RAG Chat Bot in Minutes Using Monster-API—No Coding Needed!
 
 📌 And also no need to go through the headache of setting up GPU infrastructure and preparing the environment.
 
