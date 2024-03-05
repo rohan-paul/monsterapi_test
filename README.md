@@ -1,6 +1,6 @@
 ✨ Effortlessly Launch Your RAG Chat Bot in Minutes Using Monster-API—No Coding Needed!
 
-📌 And also no need to go through the headache of setting up GPU infrastructure and preparing the environment.
+📌 Forget the hassle of configuring GPUs and prepping your environment.
 
 Its all taken care of by @monsterapis . Its simplified integration of LLM deployment with RAG-pipeline and chat User interface, allows for seamless user interaction with your own documents or knowledge-base.
 
