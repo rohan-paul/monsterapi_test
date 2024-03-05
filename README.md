@@ -1,218 +1,49 @@
-🤔 Thinking of deploying a popular Large Language Model (LLM) or a custom fine-tuned one, in production with low-cost and low-complexity ❓
+✨ Develop a Pipeline for a RAG Chat Bot with Monster API within few minutes and without a single line of code.
 
-✨ MonsterAPI is the best LLM deployment solution that I've recently come across. It enables me to host pre-trained and fine-tuned LLMs in one-click on its GPU cloud with a vast scalability and range of GPUs from 16GB to 80GB vRAM options.
+📌 Also no need to go through the headache of setting up GPU infrastructure and preparing the environment.
 
-✨ I've used it for a wide range of use cases such as Quick QA, quick commands, data summarization, and sophisticated queries.
+Its all taken care of by MonsterAPI's simplified integration of LLM deployment with RAG-pipeline and chat User interface, allowing for seamless user interaction with your own documents or knowledge-base.
 
-✨ Quickly get an API endpoint that can start serving text generation requests using models like Llama2 7B, CodeLlama 34B, Falcon 40B or any of your custom/finetuned models.
+The image below shows the workflow of RAG Bot having MonsterDeploy in the backend
 
-✨ Developed with the vLLM (Variably-Large Language Models) project as its foundation, Monster Deploy is optimized for high throughput.
+![](assets/2024-03-05-19-21-59.png)
 
-✨ As per their official blog, they recently delivered upto 10 Million tokens peak throughput for a mere cost of $1.25 while serving Zephyr 7B model, serving 39K requests per hour with an average request latency of 16ms on a 24GB GPU.
+---
 
-And this was using Monster Deploy on GPUs such as NVIDIA RTX A5000 (24GB)  and A100 (80GB).
+📌 As a first step to build the RAG pipeline, from Monster-Deploy simply select your desired LLM.
 
-----
+📌 Click 'deploy' on your MonsterAPI Deploy dashboard, and you'll have an LLM API endpoint ready to handle queries within moments.
 
-I've worked a ton with @monsterapis and in their deployment platform you get the following.
+📌 Once deployed, you'll receive an authentication token and URL to access the LLM endpoints.
 
-📌 Seamless one-click deployments with its intuitive UI
+---
 
-📌 Python client or a single curl request.
+📌 MonsterDeploy's seamless integration with LlamaIndex provides direct access to your deployed LLMs within the LlamaIndex framework.
 
-📌 Supports deployment of LLMs as a REST API endpoint and any custom docker image as a hosted docker container.
+📌 This optimizes data loading and indexing, allowing efficient parsing of large document contexts. The system then sends this context to query your deployed LLM endpoints, ensuring seamless data retrieval and indexing
 
-📌 Choose from a range of GPU and RAM configurations upto 160GB of VRAM
+---
 
-📌 Detailed API documentations with ready to use colab notebooks.
+📌 Just provide the URL and auth token of your deployed LLM in MonsterAPI's Chainlit chat UI for immediate use.
 
-👉 Website : https://monsterapi.ai
 
-🧵 1/9
+---
 
-Below image shows the cost For Different Scenarios
+✨ Some of the key advantages of deploying a private LLM endpoint with MonsterAPI
 
-![](assets/2024-02-08-18-22-17.png)
+📌 Enhanced Security: Keep your model and data secure within your private endpoint, accessible only through your deployment’s auth key.
 
-=================================
+📌 Cost-Effectiveness: MonsterAPI is one of the most cost-effective solutions for deploying and managing LLMs by integrating their affordable GPU cloud optimised for higher throughput (vllm in the backend).
 
-A recent benchmark test of Monster Deploy of the Zephyr 7B model onto an 80GB Nvidia RTX A100, demonstrated its exceptional performance.
+📌 Scalability: Your LLM deployments automatically scale bi-directionally on demand, ensuring optimal performance during peak usage.
 
-👉 Number of users (peak concurrency): 200
+📌 Customization: Tailor your LLM deployment to specific requirements, including GPU and RAM configurations. Start serving text generation requests using models like Llama2, CodeLlama, Falcon 40B or any of your custom/finetuned models.
 
-👉 Spawn Rate (users started/second): 1
+📌 Advanced Monitoring: Gain insights into LLM performance and usage metrics with MonsterAPI's comprehensive monitoring and analytics features.
 
-👉 Run Time: 15m
+📌 Fine-tuned LLM Deployments: Monster Deploy enables you to deploy fine-tuned LLMs as API endpoints. Thus reducing the need to set up complex custom pipelines for fine-tuning and deploying LLMs at scale.
 
-👉 Input Token Length: 256 Tokens (max)
-
-👉 Output Token Length: 1500 Tokens (max)
-
-👉 Cost: $0.65
-
-🧵 2/9
-
-=================================
-
-🧵 3/9
-
-📌 To access Monster Deploy Beta:
-
-👉 Sign up on MonsterAPI: https://monsterapi.ai/signup
-
-👉 Apply for Monster Deploy Beta: https://forms.gle/2vdzBca3B9qWqXXZ6
-
-👉 Deploy LLMs with these examples: https://developer.monsterapi.ai/docs/projects#demo-notebooks-for-using-monster-deploy
-
-
-
-=================================
-
-🧵 4/9
-
-The code snippet below shows how you can use Monsterapi Python SDK to quickly deploy Mixtral 8x7B Chat model on Monster Deploy.
-
-The Deployment will be able to serve the model as a REST API for both static and streaming token response support.
-
-
-```py
-!python3 -m pip install monsterapi==1.0.2b3
-# install specific beta version of client for quick serve access.
-
-api_key = "YOUR_MONSTER_API_KEY"
-from monsterapi import client as mclient
-deploy_client = mclient(api_key = api_key)
-
-# deploy Mixtral 8x7b Chat model with GPTQ 4bit quantization
-# using a 48GB GPU.
-basemodel_path="TheBloke/Mixtral-8x7B-Instruct-v0.1-GPTQ"
-    prompt_template="<s> [INST] {instruction} [/INST] {completion}</s>"
-    api_auth_token="A_RANDOM_AUTH_TOKEN_TO_SECURE_YOUR_ENDPOINT"
-    per_gpu_vram=48
-    gpu_count=1
-
-# Launch a deployment
-launch_payload = {
-    "basemodel_path": "TheBloke/Mixtral-8x7B-Instruct-v0.1-GPTQ",
-    "prompt_template": "<s> [INST] {prompt} [/INST] {completion}</s>",
-    "api_auth_token": "b6a97d3b-35d0-4720-a44c-59ee33dbc25b",
-    "per_gpu_vram": 48,
-    "gpu_count": 1,
-    "use_nightly": True
-}
-
-# Launch a deployment
-ret = deploy_client.deploy("llm", launch_payload)
-deployment_id = ret.get("deployment_id")
-print(deployment_id)
-"""
-{
-     "status":"live",
-     "message":"Server has started !!!",
-     "URL":"https://c503a813-850a-4a78-93b9.monsterapi.ai",
-     "api_auth_token":"57b7b903-a4b6-4720-8154-af71aa8e8313"
- }
- visit the url to get the llm service endpoint details
- or above url/docs to get swagger docs
-"""
-
-```
-
-=================================
-
-🧵 5/9
-
-Track Deployment Progress
-
-Keep in mind that it takes a few minutes to spin up the instance. The 'status' will transition from 'building' to 'live' as the build progresses. You can access the logs from the 'building' state to track its progress:
-
-```py
-import json
-
-status_debug = True # Just a placeholder to show possible statuses.
-
-if status_debug:
-  status_ret = deploy_client.get_deployment_status(deployment_id)
-  print(status_ret)
-
-# 'status' will be initially set to "building" and then to "live"
-# as the deployment configuration progresses and
-#the logs will be available from building state onwards.
-
-logs_ret = deploy_client.get_deployment_logs(deployment_id, n_lines = 50)
-if 'logs' not in logs_ret:
-  raise Exception("Please wait until status changes to building!")
-for i in logs_ret['logs']:
-  print(i)
-
-```
-
-============================
-
-🧵 6/9
-
-Once the deployment is live, let's query our deployed LLM endpoint:
-
-
-```py
-assert status_ret.get("status") == "live", "Please wait until status is live!"
-
-service_client  = mclient(api_key = status_ret.get("api_auth_token"),
-                          base_url = status_ret.get("URL"))
-
-payload = {
-    "input_variables": {
-        "prompt": "What's up?"},
-        "stream": False,
-        "temperature": 0.6,
-        "max_tokens": 2048
-}
-
-output = service_client.generate(model = "deploy-llm", data = payload)
-
-if payload.get("stream"):
-    for i in output:
-        print(i[0])
-else:
-    print(json.loads(output)['text'][0])
-
-```
-
-=================================
-
-🧵 7/9
-
-Once your work is done, you may terminate your LLM deployment and stop the account billing
-
-
-```py
-
-terminate_return = deploy_client.terminate_deployment(deployment_id)
-print(terminate_return)
-# {'message': 'Instance Terminated'}
-
-###############################
-# Print Status after Termination
-
-status_ret = deploy_client.get_deployment_status(deployment_id)
-print(status_ret)
-# {'status': 'terminatedByUser', 'message': 'Instance is terminatedByUser'}
-
-```
-
-=================================
-
-🧵 8/9
-
-Below report showcases a benchmark of serving Zephyr-7b, using Monster Deploy on GPUs such as Nvidia RTX A5000 (24GB)  and A100 (80GB) in multiple scenarios.
-
-
-
-![](assets/2024-02-08-18-22-04.png)
-
-=================================
-
-🧵 9/9
+---
 
 Thats a wrap - all the important links are below
 
