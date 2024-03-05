@@ -2,7 +2,7 @@
 
 📌 Also no need to go through the headache of setting up GPU infrastructure and preparing the environment.
 
-Its all taken care of by MonsterAPI's simplified integration of LLM deployment with RAG-pipeline and chat User interface, allowing for seamless user interaction with your own documents or knowledge-base.
+Its all taken care of by @monsterapis . Its simplified integration of LLM deployment with RAG-pipeline and chat User interface, allows for seamless user interaction with your own documents or knowledge-base.
 
 The image below shows the workflow of RAG Bot having MonsterDeploy in the backend
 
