@@ -6,15 +6,21 @@ Its all taken care of by MonsterAPI's simplified integration of LLM deployment w
 
 The image below shows the workflow of RAG Bot having MonsterDeploy in the backend
 
+🧵 1/6
+
 ![](assets/2024-03-05-19-21-59.png)
 
 ---
 
-📌 As a first step to build the RAG pipeline, from Monster-Deploy simply select your desired LLM.
+📌 As a first step to build the RAG pipeline, Sign up for a Monster API account, create an LLM deployment with Monster-Deploy by simply select your desired LLM with their one-click solution.
 
-📌 Click 'deploy' on your MonsterAPI Deploy dashboard, and you'll have an LLM API endpoint ready to handle queries within moments.
+📌 Once the deployment is live, you'll have an LLM API endpoint ready to handle queries within moments. This Rest API endpoint can be integrated into any public web or mobile application.
 
-📌 Once deployed, you'll receive an authentication token and URL to access the LLM endpoints.
+📌 And now, you'll receive an authentication token and URL to access the LLM endpoints. Copy the endpoint URL and authentication key
+
+📌 Paste these values into their ChainLit UI-interface to set up your chat UI along with RAG and then you are good to go.
+
+🧵 2/6
 
 ---
 
@@ -22,10 +28,13 @@ The image below shows the workflow of RAG Bot having MonsterDeploy in the backen
 
 📌 This optimizes data loading and indexing, allowing efficient parsing of large document contexts. The system then sends this context to query your deployed LLM endpoints, ensuring seamless data retrieval and indexing
 
+🧵 3/6
+
 ---
 
 📌 Just provide the URL and auth token of your deployed LLM in MonsterAPI's Chainlit chat UI for immediate use.
 
+🧵 4/6
 
 ---
 
@@ -43,6 +52,8 @@ The image below shows the workflow of RAG Bot having MonsterDeploy in the backen
 
 📌 Fine-tuned LLM Deployments: Monster Deploy enables you to deploy fine-tuned LLMs as API endpoints. Thus reducing the need to set up complex custom pipelines for fine-tuning and deploying LLMs at scale.
 
+🧵 5/6
+
 ---
 
 Thats a wrap - all the important links are below
@@ -54,3 +65,5 @@ And get Free trial credits.
 API Docs of Monster-Deploy - https://developer.monsterapi.ai/docs/monster-deploy-beta
 
 👉 Discord (Monsterapis) : https://discord.com/invite/mVXfag4kZN
+
+🧵 6/6
