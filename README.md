@@ -1,4 +1,12 @@
-✨ Effortlessly Launch Your RAG Chat Bot in Minutes Using Monster-API—No Coding Needed!
+Retrieval-augmented Generation (RAG) is a technique for enhancing the accuracy and reliability of Large Language Models with facts fetched from external sources. In other words, with RAG and LLM references an authoritative knowledge base outside of its training data sources before generating a response.
+
+RAG & Businesses are just Match Made in Heaven 💑
+
+Over the recent past, algorithmic advancements like replacing positional encoding with ALiBi, Sparse attention and Flash Attention-2 have come up for extending context-windows of LLMs, which many suspected will reduce the need for RAG. But in actuality, the importance and industry's interest of RAG has only hugely increased.
+
+----
+
+✨ Now we can effortlessly launch our RAG Chat Bot in Minutes Using Monster-API—No Coding Needed!
 
 📌 Forget the hassle of configuring GPUs and prepping your environment.
 
