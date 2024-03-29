@@ -20,7 +20,9 @@ The image below shows the workflow of RAG Bot having MonsterDeploy in the backen
 
 ---
 
-📌 As a first step to build the RAG pipeline, Sign up for a Monster API account, create an LLM deployment with Monster-Deploy by simply select your desired LLM with their one-click solution.
+📌 As a first step to build the RAG pipeline, Sign up for a Monster API account and on signup you will get 2500 free credits.
+
+📌 Then create an LLM deployment with Monster-Deploy by simply select your desired LLM with their one-click solution.
 
 📌 Once the deployment is live, you'll have an LLM API endpoint ready to handle queries within moments. This Rest API endpoint can be integrated into any public web or mobile application.
 
@@ -64,6 +66,14 @@ The image below shows the workflow of RAG Bot having MonsterDeploy in the backen
 
 ---
 
+Check out the detailed official blog on "Build a Retrieval-Augmented Generation ChatBot in 10 Minutes using MonsterAPI"
+
+https://blog.monsterapi.ai/build-a-retrieval-augmented-generation-chatbot-in-10-minutes-using-monsterapi/
+
+🧵 6/6
+
+---
+
 Thats a wrap - all the important links are below
 
 After you've signed up on MonsterAPI, apply for Deploy beta access here - https://developer.monsterapi.ai/docs/monster-deploy-beta#beta-phase--feedback
@@ -74,4 +84,3 @@ API Docs of Monster-Deploy - https://developer.monsterapi.ai/docs/monster-deploy
 
 👉 Discord (Monsterapis) : https://discord.com/invite/mVXfag4kZN
 
-🧵 6/6
