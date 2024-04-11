@@ -22,7 +22,7 @@ No-code fine-tuning is a breakthrough in the open-source world as it makes fine-
 
 ## 📌 MonsterAPI Supports 3 key Techniques
 
-The team behind MonsterAPI has recently announced new features that make the platform even better. These include:
+MonsterAPI has recently announced new features that make the platform even better. These include:
 
 📌 QLora with 4-bit quantization and nf4: This feature reduces the size of the models by compressing them using quantization techniques. This allows users to fine-tune larger models using less memory and bandwidth.
 

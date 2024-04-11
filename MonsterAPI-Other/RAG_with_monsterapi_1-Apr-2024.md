@@ -86,3 +86,13 @@ Checkout their API Docs - https://developer.monsterapi.ai/docs/monster-deploy-be
 
 👉 Discord (Monsterapis) : https://discord.com/invite/mVXfag4kZN
 
+
+
+
+===============================================================
+===============================================================
+===============================================================
+
+https://www.linkedin.com/posts/rohan-paul-ai_llm-largelanguagemodels-rag-activity-7180427707061530624-2qdx/?utm_source=share&utm_medium=member_desktop
+
+
